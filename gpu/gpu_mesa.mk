@@ -11,8 +11,3 @@
 PRODUCT_PACKAGES := \
     libGLES_mesa    \
     gralloc.$(TARGET_PRODUCT)
-
-# DRI drivers
-PRODUCT_PACKAGES += \
-    i915_dri        \
-    i965_dri        \
