@@ -20,6 +20,7 @@
 PRODUCT_DIR := $(dir $(lastword $(filter-out device/common/%,$(filter device/%,$(ALL_PRODUCTS)))))
 
 PRODUCT_PROPERTY_OVERRIDES := \
+    ro.arch=x86 \
     ro.ril.hsxpa=1 \
     ro.ril.gprsclass=10 \
     ro.com.android.dataroaming=true
