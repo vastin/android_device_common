@@ -10,7 +10,7 @@
 
 LOCAL_FIRMWARES_DIR ?= $(call my-dir)
 LOCAL_PATH := $(LOCAL_FIRMWARES_DIR)
-LOCAL_FIRMWARES ?= $(filter-out firmware.mk,$(subst $(LOCAL_PATH)/,,$(shell find $(LOCAL_PATH) -type f)))
+LOCAL_FIRMWARES ?= $(filter-out %.mk,$(subst $(LOCAL_PATH)/,,$(shell find $(LOCAL_PATH) -type f)))
 
 define include-firmware
 LOCAL_PATH := $(1)
@@ -18,7 +18,7 @@ include $$(CLEAR_VARS)
 LOCAL_MODULE := $(2)
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := FIRMWARE
-LOCAL_MODULE_PATH := $$(TARGET_OUT)/lib/firmware
+LOCAL_MODULE_PATH := $$(TARGET_OUT_SHARED_LIBRARIES)/firmware
 LOCAL_SRC_FILES := $(2)
 include $$(BUILD_PREBUILT)
 
