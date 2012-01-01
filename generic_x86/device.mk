@@ -28,6 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_COPY_FILES := \
     device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.xml \
     $(if $(wildcard $(PRODUCT_DIR)init.rc),$(PRODUCT_DIR),$(LOCAL_PATH)/)init.rc:root/init.rc \
+    $(if $(wildcard $(PRODUCT_DIR)init.sh),$(PRODUCT_DIR),$(LOCAL_PATH)/)init.sh:system/etc/init.sh \
     $(if $(wildcard $(PRODUCT_DIR)init.$(TARGET_PRODUCT).rc),$(PRODUCT_DIR)init.$(TARGET_PRODUCT).rc:root/init.$(TARGET_PRODUCT).rc) \
     $(if $(wildcard $(PRODUCT_DIR)excluded-input-devices.xml),$(PRODUCT_DIR),$(LOCAL_PATH)/)excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
 

@@ -529,9 +529,17 @@ service ppp /system/bin/pppd call gprs
     disabled
     oneshot
 
+service userinit /system/bin/sh /system/etc/init.sh
+    oneshot
+    disabled
+
 service logcat /system/bin/logcat -v time -f /data/log.txt
     disabled
     oneshot
+
+on property:dev.bootcomplete=1
+    start userinit
+    stop console
 
 on property:gsm.sim.state=READY
     start ppp
