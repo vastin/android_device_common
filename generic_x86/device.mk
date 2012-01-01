@@ -55,6 +55,9 @@ PRODUCT_CHARACTERISTICS := tablet
 # Get the touchscreen calibration tool
 $(call inherit-product-if-exists,external/tslib/tslib.mk)
 
+# Get GPS configuration
+$(call inherit-product-if-exists,device/common/gps/gps_as.mk)
+
 # Get the hardware acceleration libraries
 $(call inherit-product-if-exists,device/common/gpu/gpu_mesa.mk)
 
