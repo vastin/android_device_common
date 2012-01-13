@@ -18,6 +18,7 @@
 
 PRODUCT_PACKAGES := \
     BasicSmsReceiver \
+    Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
     JETBoy \
@@ -25,19 +26,24 @@ PRODUCT_PACKAGES := \
     LiveWallpapersPicker \
     LunarLander \
     MagicSmokeWallpapers \
+    NoiseField \
     NotePad \
+    PhaseBeam \
     Provision \
     RSSReader \
     Snake \
+    SpeechRecorder \
     SoundRecorder \
     Stk \
+    Superuser \
     VideoEditor \
     VisualizationWallpapers \
     VoiceDialer \
     chat \
     com.android.future.usb.accessory \
     drmserver \
-    faketsd \
+    gps.default \
+    hwcomposer.default \
     icu.dat \
     libdrmframework_jni \
     make_ext4fs \
@@ -53,6 +59,5 @@ PRODUCT_PACKAGES += \
 
 THIRD_PARTY_APPS = \
     AndroidTerm \
-    ConnectBot \
     FileManager \
     LIME \
