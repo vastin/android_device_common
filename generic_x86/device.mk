@@ -56,6 +56,9 @@ PRODUCT_CHARACTERISTICS := tablet
 # Get the touchscreen calibration tool
 $(call inherit-product-if-exists,external/tslib/tslib.mk)
 
+# Get the alsa files
+$(call inherit-product-if-exists,hardware/libaudio/alsa.mk)
+
 # Get GPS configuration
 $(call inherit-product-if-exists,device/common/gps/gps_as.mk)
 
@@ -70,9 +73,6 @@ $(call inherit-product-if-exists,$(SRC_TARGET_DIR)/product/locales_full.mk)
 
 # Get tablet dalvik parameters
 $(call inherit-product-if-exists,frameworks/base/build/tablet-dalvik-heap.mk)
-
-# Get the alsa files
-$(call inherit-product-if-exists,$(SRC_TARGET_DIR)/board/generic_x86/alsa.mk)
 
 # Get the TTS language packs
 $(call inherit-product-if-exists,external/svox/pico/lang/all_pico_languages.mk)
