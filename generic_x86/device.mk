@@ -53,6 +53,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_CHARACTERISTICS := tablet
 
+DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlays
+
 # Get the touchscreen calibration tool
 $(call inherit-product-if-exists,external/tslib/tslib.mk)
 
