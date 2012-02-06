@@ -18,6 +18,7 @@
 
 PRODUCT_PACKAGES := \
     BasicSmsReceiver \
+    Camera \
     Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
@@ -39,6 +40,7 @@ PRODUCT_PACKAGES := \
     VideoEditor \
     VisualizationWallpapers \
     VoiceDialer \
+    camera.default \
     chat \
     com.android.future.usb.accessory \
     drmserver \
@@ -46,6 +48,7 @@ PRODUCT_PACKAGES := \
     hwcomposer.default \
     icu.dat \
     libdrmframework_jni \
+    lights.default \
     make_ext4fs \
     powerbtnd \
     v86d \
