@@ -51,6 +51,7 @@ PRODUCT_PACKAGES := \
     lights.default \
     make_ext4fs \
     powerbtnd \
+    su \
     v86d \
 
 PRODUCT_PACKAGES += \
