@@ -465,7 +465,7 @@ service bootanim /system/bin/bootanimation
     disabled
     oneshot
 
-service wpa_supplicant /system/bin/wpa_supplicant -ddddd -Dnl80211
+service wpa_supplicant /system/bin/wpa_supplicant -ddddd
     class main
     disabled
     oneshot
