@@ -36,6 +36,13 @@ BOARD_USES_GENERIC_AUDIO ?= false
 BOARD_USES_ALSA_AUDIO ?= true
 BUILD_WITH_ALSA_UTILS ?= true
 BOARD_HAVE_BLUETOOTH ?= true
+BOARD_HAS_GPS_HARDWARE ?= true
+
+BUILD_EMULATOR_QEMUD := false
+BUILD_EMULATOR_QEMU_PROPS := false
+BUILD_EMULATOR_CAMERA_HAL := false
+BUILD_EMULATOR_GPS_MODULE := false
+BUILD_EMULATOR_SENSORS_MODULE := false
 
 # This enables the wpa wireless driver
 BOARD_WPA_SUPPLICANT_DRIVER ?= NL80211
@@ -45,7 +52,6 @@ WIFI_DRIVER_MODULE_PATH ?= auto
 
 ifneq ($(strip $(BOARD_GPU_DRIVERS)),)
 TARGET_HARDWARE_3D := true
-#USE_OPENGL_RENDERER := true
 ifeq ($(strip $(BOARD_EGL_CFG)),)
 BOARD_EGL_CFG ?= device/common/gpu/egl_mesa.cfg
 endif
