@@ -294,7 +294,7 @@ on boot
     setprop rild.libargs "-d /dev/ttyUSB1"
 
 # Set this property so surfaceflinger is not started by system_init
-    setprop system_init.startsurfaceflinger 0
+#   setprop system_init.startsurfaceflinger 0
 
     class_start core
     class_start main
@@ -438,6 +438,7 @@ service surfaceflinger /system/bin/surfaceflinger
     user system
     group graphics
     onrestart restart zygote
+    disabled
 
 service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server
     class main
@@ -545,6 +546,9 @@ service sdcard /system/bin/sdcard /data/media 1023 1023
 service logcat /system/bin/logcat -v time -f /data/log.txt
     disabled
     oneshot
+
+on property:system_init.startsurfaceflinger=0
+    start surfaceflinger
 
 on property:dev.bootcomplete=1
     start userinit
