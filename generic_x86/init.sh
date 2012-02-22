@@ -5,13 +5,16 @@ DMIPATH=/sys/class/dmi/id
 board=`cat $DMIPATH/product_name`
 case "$board" in
 	*)
-		alsa_amixer set Master on
 		;;
 esac
 
+alsa_amixer set Master on
 alsa_amixer set Master 100
 alsa_amixer set Headphone 100
 alsa_amixer set Speaker 100
+alsa_amixer set Capture 100
+alsa_amixer set Capture cap
+alsa_amixer set 'Mic Boost' 2
 
 # import cmdline variables
 for c in `cat /proc/cmdline`; do
