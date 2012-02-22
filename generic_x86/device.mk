@@ -55,9 +55,6 @@ PRODUCT_CHARACTERISTICS := tablet
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlays
 
-# Get the touchscreen calibration tool
-$(call inherit-product-if-exists,external/tslib/tslib.mk)
-
 # Get the alsa files
 $(call inherit-product-if-exists,hardware/libaudio/alsa.mk)
 
