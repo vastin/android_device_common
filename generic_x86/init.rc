@@ -549,10 +549,10 @@ service logcat /system/bin/logcat -v time -f /data/log.txt
 
 on property:system_init.startsurfaceflinger=0
     start surfaceflinger
+    stop console
 
 on property:dev.bootcomplete=1
     start userinit
-    stop console
 
 on property:gsm.sim.state=READY
     start ppp

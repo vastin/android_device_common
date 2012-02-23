@@ -32,4 +32,4 @@ brfile=$(getprop backlight.brightness_file)
 chown 1000.1000 ${brfile:-/sys/class/backlight/acpi_video0/brightness}
 
 # disable cursor blinking
-echo -e '\033[?17;0;0c' > /dev/tty0
+[ "$(getprop system_init.startsurfaceflinger)" = "0" ] && echo -e '\033[?17;0;0c' > /dev/tty0
