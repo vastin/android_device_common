@@ -19,6 +19,7 @@
 PRODUCT_PACKAGES := \
     BasicSmsReceiver \
     Camera \
+    Development \
     Galaxy4 \
     GlobalTime \
     HoloSpiralWallpaper \
@@ -34,6 +35,7 @@ PRODUCT_PACKAGES := \
     Provision \
     RSSReader \
     Snake \
+    SpareParts \
     SpeechRecorder \
     SoundRecorder \
     Stk \

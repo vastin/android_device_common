@@ -17,5 +17,6 @@
  */
 -->
 <resources>
-    <integer name="def_screen_off_timeout">1800000</integer>
+    <integer name="def_screen_off_timeout">600000</integer>
+    <bool name="def_install_non_market_apps">true</bool>
 </resources>
