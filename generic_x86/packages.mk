@@ -30,6 +30,7 @@ PRODUCT_PACKAGES := \
     NoiseField \
     NotePad \
     PhaseBeam \
+    PinyinIME \
     Provision \
     RSSReader \
     Snake \
