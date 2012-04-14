@@ -19,23 +19,18 @@
 PRODUCT_PACKAGES := \
     BasicSmsReceiver \
     Camera \
-    Development \
     Galaxy4 \
-    GlobalTime \
     HoloSpiralWallpaper \
-    JETBoy \
     LiveWallpapers \
     LiveWallpapersPicker \
-    LunarLander \
     MagicSmokeWallpapers \
     NoiseField \
-    NotePad \
     PhaseBeam \
     Provision \
     RSSReader \
     Snake \
     SpareParts \
-    SpeechRecorder \
+    PinyinIME \
     SoundRecorder \
     Stk \
     Superuser \
