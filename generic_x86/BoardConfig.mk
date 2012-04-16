@@ -57,7 +57,7 @@ BOARD_EGL_CFG ?= device/common/gpu/egl_mesa.cfg
 endif
 endif
 
-BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.hardware=$(TARGET_PRODUCT) acpi_sleep=s3_bios,s3_mode $(if $(BOARD_GPU_DRIVERS),,video=-16)
+BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.hardware=$(TARGET_PRODUCT) acpi_sleep=s3_bios,s3_mode pcie_aspm=force $(if $(BOARD_GPU_DRIVERS),,video=-16)
 
 # Enable dex-preoptimization to speed up the first boot sequence
 # of an SDK AVD. Note that this operation only works on Linux for now
