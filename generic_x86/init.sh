@@ -14,6 +14,7 @@ alsa_amixer set Headphone 100
 alsa_amixer set Speaker 100
 alsa_amixer set Capture 100
 alsa_amixer set Capture cap
+alsa_amixer set PCM 100 unmute
 alsa_amixer set 'Mic Boost' 2
 
 # import cmdline variables
@@ -33,3 +34,7 @@ chown 1000.1000 ${brfile:-/sys/class/backlight/acpi_video0/brightness}
 
 # disable cursor blinking
 [ "$(getprop system_init.startsurfaceflinger)" = "0" ] && echo -e '\033[?17;0;0c' > /dev/tty0
+
+hardware=$(getprop ro.hardware)
+hw_sh=/system/etc/init.$hardware.sh
+[ -e $hw_sh ] && exec sh $hw_sh
