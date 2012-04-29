@@ -33,6 +33,9 @@ PRODUCT_COPY_FILES := \
     $(if $(wildcard $(PRODUCT_DIR)excluded-input-devices.xml),$(PRODUCT_DIR),$(LOCAL_PATH)/)excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ppp/ip-up:system/etc/ppp/ip-up \
+    $(LOCAL_PATH)/ppp/ip-down:system/etc/ppp/ip-down \
+    $(LOCAL_PATH)/ppp/peers/gprs:system/etc/ppp/peers/gprs \
     $(LOCAL_PATH)/GenericTouch.idc:system/usr/idc/GenericTouch.idc \
     frameworks/base/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \

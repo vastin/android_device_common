@@ -530,13 +530,6 @@ service faketsd /system/bin/faketsd
     disabled
     oneshot
 
-service ppp /system/bin/pppd call gprs
-    class main
-    user root
-    group system radio
-    disabled
-    oneshot
-
 service userinit /system/bin/sh /system/etc/init.sh
     oneshot
     disabled
@@ -555,12 +548,6 @@ on property:system_init.startsurfaceflinger=0
 
 on property:dev.bootcomplete=1
     start userinit
-
-on property:gsm.sim.state=READY
-    start ppp
-
-on property:gsm.sim.state=UNKNOWN
-    stop ppp
 
 on property:debug.logcat=1
     start logcat

@@ -46,10 +46,12 @@ PRODUCT_PACKAGES := \
     chat \
     com.android.future.usb.accessory \
     drmserver \
+    eject \
     gps.default \
     hwcomposer.default \
     icu.dat \
     libdrmframework_jni \
+    libhuaweigeneric-ril \
     lights.default \
     make_ext4fs \
     powerbtnd \
