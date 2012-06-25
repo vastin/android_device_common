@@ -6,6 +6,7 @@
 # The generic product target doesn't have any hardware-specific pieces.
 
 TARGET_CPU_ABI := x86
+TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH := x86
 USE_CAMERA_STUB := false
 TARGET_USERIMAGES_USE_EXT4 := true
