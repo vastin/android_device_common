@@ -538,7 +538,7 @@ service sdcard /system/bin/sdcard /data/media 1023 1023
     class late_start
     disabled
 
-service logcat /system/bin/logcat -v time -f /data/log.txt
+service logcat /system/bin/logcat -v threadtime -f /data/log.txt
     disabled
     oneshot
 
