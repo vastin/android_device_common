@@ -35,6 +35,9 @@ chown 1000.1000 ${brfile:-/sys/class/backlight/acpi_video0/brightness}
 # disable cursor blinking
 [ "$(getprop system_init.startsurfaceflinger)" = "0" ] && echo -e '\033[?17;0;0c' > /dev/tty0
 
+# a hack for USB modem
+lsusb | grep 1a8d:1000 && eject
+
 hardware=$(getprop ro.hardware)
 hw_sh=/system/etc/init.$hardware.sh
 [ -e $hw_sh ] && exec sh $hw_sh
