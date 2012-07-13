@@ -28,6 +28,9 @@ TARGET_PROVIDES_INIT_RC ?= true
 TARGET_HAS_THIRD_PARTY_APPS ?= false
 TARGET_CPU_SMP ?= true
 
+# customize the malloced address to be 16-byte aligned
+BOARD_MALLOC_ALIGNMENT := 16
+
 # Set /system/bin/sh to mksh
 TARGET_SHELL := mksh
 
