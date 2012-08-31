@@ -10,6 +10,7 @@ esac
 
 alsa_amixer set Master on
 alsa_amixer set Master 100
+alsa_amixer set Headphone on
 alsa_amixer set Headphone 100
 alsa_amixer set Speaker 100
 alsa_amixer set Capture 100
